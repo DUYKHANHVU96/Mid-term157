@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #ffff1c, #00c3ff, #ff00f7, #ff0000, #9dff008c);
+    /* background là thuộc tính tạo nền cho trang web
+    linear-gradient là kiểu tạo nền gradient theo hướng */
+    background-size: 400% 400%;
+    /*background-size là thuộc tính xác định kích thước của hình nền
+    400% 400% là kích thước chiều rộng và chiều cao của hình nền */
+    min-height: 100vh;
+    /* min-height là thuộc tính xác định chiều cao tối thiểu của phần tử */
+    display: flex;
+    /* display là thuộc tính xác định cách hiển thị phần tử */
+    justify-content: center;
+    /* justify-content là thuộc tính xác định cách căn chỉnh phần tử theo chiều ngang */
+    align-items: center;
+    /* align-items là thuộc tính xác định cách căn chỉnh phần tử theo chiều dọc */
+    padding: 20px;
+    /* padding là thuộc tính tạo khoảng cách giữa viền và nội dung bên trong */
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    max-width: 600px;
+    padding: 40px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+.profile-header{
+    text-align: center;
+    /* text-align là thuộc tính căn chỉnh văn bản */
+    margin-bottom: 20px;
+    /* margin-bottom là thuộc tính tạo khoảng cách phía dưới của phần tử */
+    position: relative;
+    /* position là thuộc tính xác định kiểu vị trí của phần tử */
+}
+.profile-image{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    /* object-fit là thuộc tính xác định cách hiển thị hình ảnh */
+    /* cover là giữ nguyên tỷ lệ của hình ảnh và điều chỉnh kích thước của hình ảnh để nó vừa với phần tử chứa nó */
+    border-radius: 50%;
+    /* border-radius là thuộc tính xác định độ cong của góc của phần tử */ 
+    border: 2px solid #ff6881;
+    /* border là thuộc tính tạo viền cho phần tử */
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+    /* box-shadow là thuộc tính tạo bóng cho phần tử */
+    transition: transform 0.3s ease;
+    /* transition là thuộc tính tạo hiệu ứng chuyển động */
+    /* transform là thuộc tính biến đổi phần tử */
+    /*ease là kiểu chuyển động */
+}
+.profile-image:hover{
+    transform: scale(1.05);
+    /* transform là thuộc tính biến đổi phần tử */
+    /* scale là thuộc tính thay đổi kích thước của phần tử */
+}
+h1{
+    color: #2c365086;
+    /* color là thuộc tính xác định màu chữ */
+    font-size: 2.5rem;
+    /* font-size là thuộc tính xác định kích thước chữ */
+    margin-bottom: 10px;
+    /* margin-bottom là thuộc tính tạo khoảng cách phía dưới của phần tử */
+}
+.title{
+    color: #ed68ff;
+    /* color là thuộc tính xác định màu chữ */
+    font-size: 1.2rem;
+    /* font-size là thuộc tính xác định kích thước chữ */
+    margin-bottom: 20px;
+    /* margin-bottom là thuộc tính tạo khoảng cách phía dưới của phần tử */
+    font-weight: bold;
+    /* font-weight là thuộc tính xác định độ đậm của chữ */
+}
+.section{
+    margin-bottom: 30px;
+    /* margin-bottom là thuộc tính tạo khoảng cách phía dưới của phần tử */
+    transition: transform 0.3s ease;
+}
+.section:hover{
+    transform: translateY(-5px);
+    /* transform là thuộc tính biến đổi phần tử */
+}
+h2{
+    color: #201cff5b;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #ff6881;
+    padding-bottom: 10px;
+}
+p{
+    color: black;
+    line-height: 1.6;
+    /* line-height là thuộc tính xác định chiều cao dòng chữ */
+    margin-bottom: 15px;
+}
+.skill{
+    display: flex;
+    gap: 10px;
+    /* gap là thuộc tính tạo khoảng cách giữa các phần tử con */
+
+}
+.skill-tag{
+    background: linear-gradient(45deg, #6c5ce7, #a367dc);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    /* transition là thuộc tính tạo hiệu ứng chuyển động */
+    /* all là thuộc tính áp dụng hiệu ứng cho tất cả thuộc tính */
+    box-shadow: 0 2px 5px rgba(108, 92, 231, 0.6);
+    /* box-shadow là thuộc tính tạo bóng cho phần tử */
+}
+.skill-tag:hover{
+    transform: scale(1.5);
+    /* transform là thuộc tính biến đổi phần tử */
+    /* scale là thuộc tính thay đổi kích thước của phần tử */
+    box-shadow: 0 5px 15px rgba(108, 92, 231, 0.6);
+}
+ul{
+padding: 20px;
+}
+.contact-item{
+text-decoration: none;
+display: flex;
+justify-content: center;
+}
+.section2{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
